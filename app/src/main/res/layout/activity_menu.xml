@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgapp4"
+    tools:context="ru.dino.flying.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Welcome!"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:background="@drawable/bgitem"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Cubika"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onCube"
+        android:background="@drawable/shape2"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="100dp"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/ic_vector_round_play_arrow" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Одиночная игра" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/chevron_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onPlay"
+        android:foreground="?android:selectableItemBackground"
+        android:background="@drawable/shape2"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/gamepad_circle_outline" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Играть вдвоем" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/chevron_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="goToSettings"
+        android:background="@drawable/shape2"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/cube_outline" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Кубики" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/chevron_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onAbout"
+        android:background="@drawable/shape2"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/information_outline" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Об игре" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/chevron_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onBackPressed"
+        android:background="@drawable/shape2"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center_vertical"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="72dp"
+        android:id="@+id/onHome"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user.avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/power" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/user.fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Выход" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/chevron_right" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

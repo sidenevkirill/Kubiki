@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp4"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/menutop"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shape1"
+            android:gravity="center_vertical"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:minHeight="72dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
+                android:onClick="onBack">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/close" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:foreground="?android:selectableItemBackground"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvVar1"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="ИГРОК 1"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
+                android:onClick="goToSettings">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/information_outline1" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menutop"
+        android:paddingTop="40dp"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Игрок 1"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="25dp" />
+
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Игрок 2"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/ivVar1"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="10dp"
+                android:src="@drawable/one" />
+
+
+            <ImageView
+                android:id="@+id/ivVar2"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:padding="10dp"
+                android:src="@drawable/fo" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="onCube"
+            android:background="@drawable/shape"
+            android:gravity="center_vertical"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:minHeight="72dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/minus" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:id="@+id/btVar1"
+                android:foreground="?android:selectableItemBackground"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="БРОСИТЬ"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:background="@drawable/plus" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
